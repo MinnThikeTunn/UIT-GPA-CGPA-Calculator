@@ -223,31 +223,40 @@ export default function Home() {
               <div className="subjects-container">
                 {sem.subjects.map((sub) => (
                   <div key={sub.id} className="subject-row">
-                    <input
-                      placeholder="Subject name"
-                      value={sub.name}
-                      onChange={(e) => updateSubject(sem.id, sub.id, "name", e.target.value)}
-                    />
-                    <select
-                      value={sub.grade}
-                      onChange={(e) => updateSubject(sem.id, sub.id, "grade", e.target.value)}
-                    >
-                      {gradeOptions.map((grade) => (
-                        <option key={grade} value={grade}>
-                          {grade}
-                        </option>
-                      ))}
-                    </select>
-                    <input
-                      type="number"
-                      min={0}
-                      step={1}
-                      value={sub.creditEarned ?? DEFAULT_CREDIT}
-                      onChange={(e) =>
-                        updateSubject(sem.id, sub.id, "creditEarned", Number(e.target.value) || 0)
-                      }
-                      title="Credit Earned"
-                    />
+                    <div className="field-group">
+                      <label className="mobile-label">Subject</label>
+                      <input
+                        placeholder="Subject name"
+                        value={sub.name}
+                        onChange={(e) => updateSubject(sem.id, sub.id, "name", e.target.value)}
+                      />
+                    </div>
+                    <div className="field-group">
+                      <label className="mobile-label">Grade</label>
+                      <select
+                        value={sub.grade}
+                        onChange={(e) => updateSubject(sem.id, sub.id, "grade", e.target.value)}
+                      >
+                        {gradeOptions.map((grade) => (
+                          <option key={grade} value={grade}>
+                            {grade}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="field-group">
+                      <label className="mobile-label">Credit</label>
+                      <input
+                        type="number"
+                        min={0}
+                        step={1}
+                        value={sub.creditEarned ?? DEFAULT_CREDIT}
+                        onChange={(e) =>
+                          updateSubject(sem.id, sub.id, "creditEarned", Number(e.target.value) || 0)
+                        }
+                        title="Credit Earned"
+                      />
+                    </div>
                     <button
                       className="tertiary-btn"
                       type="button"
