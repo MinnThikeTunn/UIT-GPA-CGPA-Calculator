@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --wired-black: #000000;
+  --page-ink: #1a1a1a;
+  --paper-white: #ffffff;
+  --link-blue: #057dbc;
+  --hairline-tint: #e2e8f0;
+  --caption-gray: #757575;
+  --rule-black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 0 !important; /* STRICT: no rounded corners */
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper-white);
+  color: var(--page-ink);
+  font-family: 'Inter', "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Playfair Display', serif; /* Substituting WiredDisplay */
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 0.93;
+  letter-spacing: -0.5px;
+  margin: 0 0 24px 0;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Inter', sans-serif; /* Substituting Apercu */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.28px;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.08;
+  margin: 0 0 12px 0;
+}
+
+.kicker {
+  font-family: 'JetBrains Mono', monospace; /* Substituting WiredMono */
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0 0 8px 0;
+  color: var(--wired-black);
+}
+
+p {
+  margin: 0 0 16px 0;
+}
+
+.muted {
+  font-family: 'Lora', serif; /* Substituting BreveText */
+  color: var(--caption-gray);
+  font-size: 15px;
+  line-height: 1.47;
+}
+
+/* Layout Elements */
+.page-header {
+  border-bottom: 2px solid var(--wired-black);
+  padding-bottom: 32px;
+  margin-bottom: 48px;
+}
+
+.card {
+  border-top: 1px solid var(--wired-black);
+  padding: 32px 0;
+  margin-bottom: 32px;
+}
+
+.section-spacing {
+  margin-bottom: 64px;
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid var(--wired-black);
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--hairline-tint);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Semester Grid */
+.semester-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 767px) {
+  .semester-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.semester-module {
+  display: flex;
+  flex-direction: column;
+}
+
+.subjects-header {
+  display: grid;
+  grid-template-columns: 1fr 100px 80px 80px; /* Matching subject-row */
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 2px solid var(--wired-black);
+  margin-top: 16px;
+}
+
+.col-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--caption-gray);
+  font-weight: 700;
+}
+
+.subjects-container {
+  margin: 0; /* Removed margin to let header define the top */
+}
+
+.subject-row {
+  display: grid;
+  grid-template-columns: 1fr 100px 80px 80px; /* Fixed width for consistency */
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--hairline-tint);
+}
+
+@media (max-width: 600px) {
+  .subject-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Forms */
+input, select {
+  border: 2px solid var(--wired-black);
+  padding: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  background: var(--paper-white);
+}
+
+input:focus, select:focus {
+  outline: none;
+  background-color: #f8fafc;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  transition: all 150ms ease;
+}
+
+.primary-cta {
+  background: var(--paper-white);
+  color: var(--wired-black);
+  border: 2px solid var(--wired-black);
+  padding: 16px 32px;
+}
+
+.primary-cta:hover {
+  background: var(--wired-black);
+  color: var(--paper-white);
+}
+
+.secondary-cta {
+  background: var(--wired-black);
+  color: var(--paper-white);
+  border: 2px solid var(--wired-black);
+  padding: 12px 24px;
+}
+
+.secondary-cta:hover {
+  background: var(--paper-white);
+  color: var(--wired-black);
+}
+
+.tertiary-btn {
+  background: transparent;
+  border: none;
+  color: var(--page-ink);
+  text-decoration: underline;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.tertiary-btn:hover {
+  color: var(--link-blue);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Add Semester Zone */
+.add-semester-zone {
+  margin: 64px 0;
+  padding: 64px 0;
+  border-top: 1px solid var(--wired-black);
+  border-bottom: 2px solid var(--wired-black);
+  display: flex;
+  justify-content: center;
+  background-color: #fcfcfc;
+}
+
+.add-semester-zone .primary-cta {
+  font-size: 20px;
+  padding: 24px 64px;
+  border-width: 3px;
+}
+
+/* Summary */
+.summary-section {
+  background-color: var(--paper-white);
+  color: var(--page-ink);
+  border: 2px solid var(--wired-black);
+  padding: 0;
+  margin-top: 64px;
+}
+
+.summary-ribbon {
+  background-color: var(--wired-black);
+  color: var(--paper-white);
+  padding: 12px 24px;
+}
+
+.summary-ribbon .kicker {
+  color: var(--paper-white);
+  margin: 0;
+}
+
+.summary-content {
+  padding: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-content h2 {
+  margin: 0;
+}
+
+.cgpa-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cgpa-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 72px;
+  line-height: 1;
+  margin: 0;
+  font-weight: 700;
+}
+
+.cgpa-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--caption-gray);
+}
+
+.semester-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline-tint);
+}
+
+.semester-gpa {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin: 0;
+}
