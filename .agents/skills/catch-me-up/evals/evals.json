@@ -1,0 +1,23 @@
+{
+  "skill_name": "catch-me-up",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Catch me up on this project. I've just cloned it and want to understand how it's structured before I start working on it.",
+      "expected_output": "A structured overview covering architecture (directory structure, entry points, key components), conventions (how code is organized), and potentially testing setup. Should present options to let user prioritize deeper exploration.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I need to understand how authentication works in this codebase. Where does it handle login and verify user tokens?",
+      "expected_output": "A Feature Trace showing how auth flows from user login through token verification. Should trace the data flow and identify key files involved.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "What's the testing setup here? I need to add a test for a new feature but I want to follow the existing patterns.",
+      "expected_output": "Information about testing framework, test file locations, naming conventions, how to run tests, and example test patterns to follow.",
+      "files": []
+    }
+  ]
+}
