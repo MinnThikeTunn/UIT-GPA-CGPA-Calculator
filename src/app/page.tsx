@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 
 type GradeKey =
   | "A+"
@@ -302,6 +303,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+    <div className="fab-wrapper">
+        <Link href="/chatbot" className="fab" title="AI Chat Assistant">
+          <span className="fab-icon">✦</span>
+          <span className="fab-label">AI</span>
+        </Link>
+      </div>
     </main>
   );
 }
