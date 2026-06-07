@@ -22,7 +22,7 @@ if (QDRANT_API_KEY) {
 // Constants
 // ------------------------------------------------------------------
 export const COLLECTION_NAME = "rag_documents";
-export const VECTOR_SIZE = 2048;
+export const VECTOR_SIZE = Number(process.env.EMBED_DIMENSION) || 768;
 export const DISTANCE = "Cosine" as const;
 
 // ------------------------------------------------------------------
