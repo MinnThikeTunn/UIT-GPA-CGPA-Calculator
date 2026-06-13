@@ -1,0 +1,57 @@
+{
+  "version": "2.13",
+  "children": [
+    {
+      "type": "frame",
+      "id": "GSxEB",
+      "x": 0,
+      "y": 0,
+      "name": "Button / Secondary",
+      "theme": {
+        "Theme": "Default"
+      },
+      "reusable": true,
+      "fill": "$bg",
+      "cornerRadius": 21,
+      "stroke": "$border",
+      "strokeWidth": 12,
+      "gap": 8,
+      "padding": [
+        12,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "Ss7nj",
+          "name": "Label",
+          "fill": "$text_primary",
+          "content": "Secondary Action",
+          "fontFamily": "$font_sans",
+          "fontSize": 14,
+          "fontWeight": "Bold"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg": {
+      "type": "color",
+      "value": "#ffffff"
+    },
+    "border": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "text_primary": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "font_sans": {
+      "type": "string",
+      "value": "Inter"
+    }
+  }
+}
