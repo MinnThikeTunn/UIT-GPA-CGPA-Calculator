@@ -1,0 +1,530 @@
+{
+  "version": "2.13",
+  "children": [
+    {
+      "type": "frame",
+      "id": "a876BK",
+      "x": 0,
+      "y": 0,
+      "name": "Component Definitions",
+      "gap": 32,
+      "padding": 24,
+      "children": [
+        {
+          "type": "frame",
+          "id": "WneRE",
+          "name": "Button / Primary",
+          "reusable": true,
+          "fill": "$primary_bg",
+          "stroke": "$border",
+          "strokeWidth": 2,
+          "gap": 8,
+          "padding": [
+            12,
+            24
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "oRQ5r",
+              "name": "Label",
+              "fill": "$primary_text",
+              "content": "Primary Action",
+              "fontFamily": "$font_sans",
+              "fontSize": 14,
+              "fontWeight": "Bold"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Fgs3A",
+          "name": "Button / Secondary",
+          "theme": {
+            "Theme": "Default"
+          },
+          "reusable": true,
+          "fill": "$bg",
+          "cornerRadius": 21,
+          "stroke": "$border",
+          "strokeWidth": 12,
+          "gap": 8,
+          "padding": [
+            12,
+            24
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "KCMS4",
+              "name": "Label",
+              "fill": "$text_primary",
+              "content": "Secondary Action",
+              "fontFamily": "$font_sans",
+              "fontSize": 14,
+              "fontWeight": "Bold"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OrAoH",
+          "name": "Button / Tertiary",
+          "reusable": true,
+          "gap": 8,
+          "padding": [
+            12,
+            24
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "XFNmP",
+              "name": "Label",
+              "fill": "$text_primary",
+              "content": "Tertiary Action",
+              "fontFamily": "$font_sans",
+              "fontSize": 14,
+              "fontWeight": "Bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "BJsNF",
+      "x": 610,
+      "y": 0,
+      "name": "Button Showcase Canvas",
+      "clip": true,
+      "width": 900,
+      "fill": "$bg",
+      "stroke": "$border",
+      "strokeWidth": 2,
+      "layout": "vertical",
+      "gap": 28,
+      "padding": 40,
+      "children": [
+        {
+          "type": "frame",
+          "id": "NsAFM",
+          "name": "Header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "e1RFq",
+              "name": "System Kicker",
+              "fill": "$accent",
+              "content": "WIRED DESIGN SYSTEM / COMPONENT LIBRARY",
+              "fontFamily": "$font_mono",
+              "fontSize": 11,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "aqlIb",
+              "name": "Main Title",
+              "fill": "$text_primary",
+              "content": "Interactive Button Variants",
+              "fontFamily": "Playfair Display",
+              "fontSize": 28,
+              "fontWeight": "Bold"
+            },
+            {
+              "type": "text",
+              "id": "VsCq8",
+              "name": "Subtitle",
+              "fill": "$text_secondary",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Foundational button components conforming to the brutalist wireframe aesthetic. Features square-corners, defined border weights, and clear visual hierarchy.",
+              "lineHeight": 1.4,
+              "fontFamily": "$font_sans",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "iAuBT",
+          "name": "Divider",
+          "fill": "$border",
+          "width": "fill_container",
+          "height": 2
+        },
+        {
+          "type": "text",
+          "id": "p0Wap",
+          "name": "Section 1 Label",
+          "fill": "$text_secondary",
+          "content": "01 / STANDALONE BUTTON VARIANTS",
+          "fontFamily": "$font_mono",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "BUCtZ",
+          "name": "Variants Row",
+          "width": "fill_container",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "YgVZQ",
+              "name": "Col Primary",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gJ5yE",
+                  "name": "Preview Box Primary",
+                  "width": "fill_container",
+                  "height": 90,
+                  "fill": "#FBFBFB",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "MQv75",
+                      "type": "ref",
+                      "ref": "WneRE",
+                      "name": "Primary CTA",
+                      "descendants": {
+                        "oRQ5r": {
+                          "content": "Get Started"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Tc74d",
+                  "name": "Info Primary",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "En33t",
+                      "name": "Title",
+                      "fill": "$text_primary",
+                      "content": "1) Primary CTA",
+                      "fontFamily": "$font_sans",
+                      "fontSize": 13,
+                      "fontWeight": "Bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pnIv1",
+                      "name": "Desc",
+                      "fill": "$text_secondary",
+                      "content": "Prominent solid black background",
+                      "fontFamily": "$font_sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "EpNMR",
+              "name": "Col Secondary",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "U3pwnu",
+                  "name": "Preview Box Secondary",
+                  "width": "fill_container",
+                  "height": 90,
+                  "fill": "#FBFBFB",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UpSvZ",
+                      "name": "Secondary CTA",
+                      "fill": "$bg",
+                      "cornerRadius": 21,
+                      "stroke": "$border",
+                      "strokeWidth": 12,
+                      "gap": 8,
+                      "padding": [
+                        12,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "D2kZXq",
+                          "name": "Label",
+                          "fill": "$text_primary",
+                          "content": "Learn More",
+                          "fontFamily": "$font_sans",
+                          "fontSize": 14,
+                          "fontWeight": "Bold"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "I7v7de",
+                  "name": "Info Secondary",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qdwYp",
+                      "name": "Title",
+                      "fill": "$text_primary",
+                      "content": "2) Secondary CTA",
+                      "fontFamily": "$font_sans",
+                      "fontSize": 13,
+                      "fontWeight": "Bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hDznh",
+                      "name": "Desc",
+                      "fill": "$text_secondary",
+                      "content": "Outlined, transparent background",
+                      "fontFamily": "$font_sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "I9XuN",
+              "name": "Col Tertiary",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jyi9k",
+                  "name": "Preview Box Tertiary",
+                  "width": "fill_container",
+                  "height": 90,
+                  "fill": "#FBFBFB",
+                  "stroke": "$border",
+                  "strokeWidth": 1,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "tJNlM",
+                      "type": "ref",
+                      "ref": "OrAoH",
+                      "name": "Tertiary Button",
+                      "descendants": {
+                        "XFNmP": {
+                          "content": "Cancel"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "EttUo",
+                  "name": "Info Tertiary",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "k0Z5ws",
+                      "name": "Title",
+                      "fill": "$text_primary",
+                      "content": "3) Tertiary Button",
+                      "fontFamily": "$font_sans",
+                      "fontSize": 13,
+                      "fontWeight": "Bold"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NOYjq",
+                      "name": "Desc",
+                      "fill": "$text_secondary",
+                      "content": "Ghost style, no background/border",
+                      "fontFamily": "$font_sans",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "nvoGa",
+          "name": "Divider 2",
+          "fill": "$border",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "u8LDl",
+          "name": "Section 2 Label",
+          "fill": "$text_secondary",
+          "content": "02 / RESPONSIVE LAYOUT",
+          "fontFamily": "$font_mono",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "kz6DQ",
+          "name": "Col Full Width",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "X6jxw",
+              "name": "Preview Box Full Width",
+              "width": "fill_container",
+              "fill": "#FBFBFB",
+              "stroke": "$border",
+              "strokeWidth": 1,
+              "padding": 24,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "bFWoz",
+                  "type": "ref",
+                  "ref": "WneRE",
+                  "name": "Full-Width Primary Button",
+                  "width": "fill_container",
+                  "descendants": {
+                    "oRQ5r": {
+                      "content": "Create New Account"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wFYun",
+              "name": "Info Full Width",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jKsRP",
+                  "name": "Title",
+                  "fill": "$text_primary",
+                  "content": "Full-Width Primary Button",
+                  "fontFamily": "$font_sans",
+                  "fontSize": 13,
+                  "fontWeight": "Bold"
+                },
+                {
+                  "type": "text",
+                  "id": "Erulv",
+                  "name": "Desc",
+                  "fill": "$text_secondary",
+                  "content": "Stretches to completely fill the parent container's width (width: fill_container)",
+                  "fontFamily": "$font_sans",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "themes": {
+    "Theme": [
+      "Default"
+    ],
+    "Theme-2": [
+      "Default"
+    ]
+  },
+  "variables": {
+    "font_mono": {
+      "type": "string",
+      "value": "JetBrains Mono"
+    },
+    "font_sans": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "border": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "text_primary": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "text_secondary": {
+      "type": "color",
+      "value": "#555555"
+    },
+    "accent": {
+      "type": "color",
+      "value": "#057dbc"
+    },
+    "bg": {
+      "type": "color",
+      "value": "#ffffff"
+    },
+    "primary_text": {
+      "type": "color",
+      "value": "#ffffff"
+    },
+    "primary_bg": {
+      "type": "color",
+      "value": "#000000"
+    }
+  }
+}

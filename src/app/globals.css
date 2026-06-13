@@ -1,18 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
+  /* Design Tokens synced from button.pen */
   --wired-black: #000000;
   --page-ink: #1a1a1a;
   --paper-white: #ffffff;
   --link-blue: #057dbc;
   --hairline-tint: #e2e8f0;
-  --caption-gray: #757575;
+  --caption-gray: #555555;
   --rule-black: #000000;
+  
+  /* Button Design Tokens */
+  --color-primary-bg: #000000;
+  --color-primary-text: #ffffff;
+  --color-secondary-bg: #ffffff;
+  --color-secondary-text: #000000;
+  --color-tertiary-text: #000000;
+  --color-accent: #057dbc;
+  --color-border: #000000;
 }
 
 * {
   box-sizing: border-box;
   border-radius: 0 !important; /* STRICT: no rounded corners */
+}
+
+/* Exception: Secondary button has rounded corners */
+.secondary-cta {
+  border-radius: 21px !important;
 }
 
 body {
@@ -241,28 +256,32 @@ button {
   transition: all 150ms ease;
 }
 
+/* Primary CTA - Solid black background, white text */
 .primary-cta {
-  background: var(--paper-white);
-  color: var(--wired-black);
-  border: 2px solid var(--wired-black);
-  padding: 16px 32px;
+  background: var(--color-primary-bg);
+  color: var(--color-primary-text);
+  border: 2px solid var(--color-border);
+  padding: 12px 24px;
 }
 
 .primary-cta:hover {
-  background: var(--wired-black);
-  color: var(--paper-white);
+  background: var(--color-secondary-bg);
+  color: var(--color-primary-bg);
 }
 
+/* Secondary CTA - White background, black 12px border, rounded corners */
 .secondary-cta {
-  background: var(--wired-black);
-  color: var(--paper-white);
-  border: 2px solid var(--wired-black);
+  background: var(--color-secondary-bg);
+  color: var(--color-secondary-text);
+  border: 12px solid var(--color-border);
+  border-radius: 21px;
   padding: 12px 24px;
 }
 
 .secondary-cta:hover {
-  background: var(--paper-white);
-  color: var(--wired-black);
+  background: var(--color-primary-bg);
+  color: var(--color-primary-text);
+  border-color: var(--color-primary-bg);
 }
 
 .tertiary-btn {

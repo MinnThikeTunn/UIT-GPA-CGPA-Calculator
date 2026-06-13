@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import Button from "../components/button";
 
 type GradeKey =
   | "A+"
@@ -258,21 +259,20 @@ export default function Home() {
                         title="Credit Earned"
                       />
                     </div>
-                    <button
-                      className="tertiary-btn"
-                      type="button"
+                    <Button
+                      variant="tertiary"
                       onClick={() => removeSubject(sem.id, sub.id)}
                     >
                       Remove
-                    </button>
+                    </Button>
                   </div>
                 ))}
               </div>
 
               <div className="semester-actions">
-                <button className="secondary-cta" type="button" onClick={() => addSubject(sem.id)}>
+                <Button variant="secondary" onClick={() => addSubject(sem.id)}>
                   Add Subject
-                </button>
+                </Button>
               </div>
 
               <div className="semester-footer">
@@ -286,9 +286,9 @@ export default function Home() {
       </div>
 
       <div className="add-semester-zone">
-        <button className="primary-cta full-width" type="button" onClick={addSemester}>
+        <Button variant="primary" fullWidth onClick={addSemester}>
           Add Semester
-        </button>
+        </Button>
       </div>
 
       <section className="summary-section section-spacing">
